@@ -1,12 +1,14 @@
 package ru.geekbrains.service;
 
+import org.springframework.stereotype.Service;
 import ru.geekbrains.dto.Product;
 import ru.geekbrains.repository.ProductRepository;
 
 import java.util.List;
 
+@Service
 public class ProductService {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository){
         this.productRepository = productRepository;

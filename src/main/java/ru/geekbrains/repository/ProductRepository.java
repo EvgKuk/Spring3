@@ -19,7 +19,7 @@ public class ProductRepository {
     }
 
     public List<Product> getAll() {
-        return null;
+        return productList;
     }
 
     public void save (Product product){

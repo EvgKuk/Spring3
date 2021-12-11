@@ -1,5 +1,6 @@
 package ru.geekbrains.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ru.geekbrains.dto.Product;
 import ru.geekbrains.service.ProductService;
 
+@Controller
 public class ProductController {
     private ProductService productService;
 
@@ -42,7 +44,7 @@ public class ProductController {
                               @RequestParam String name,
                               @RequestParam Float cost) {
         productService.save(new Product(id, name, cost));
-        return "redirect:all";
+        return "redirect:/all";
     }
 
 }
